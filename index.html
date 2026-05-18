@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio creativo de Anduescribe: redacción, programación, corrección y más." />
+  <title>Anduescribe</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #fdf6f0;
+      color: #3b2f2f;
+    }
+
+    header {
+      background: #fff3e0;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header img {
+      width: 150px;
+      border-radius: 100px;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    header p {
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h2 {
+      color: #4e342e;
+      border-bottom: 2px solid #d7ccc8;
+      padding-bottom: 0.5rem;
+    }
+
+    .proyecto {
+      background: #ffffff;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-left: 4px solid #a1887f;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #fbe9e7;
+      color: #5d4037;
+    }
+
+    /* CHATBOT */
+
+    .chat-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 320px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+    .avatar-section {
+      text-align: center;
+    }
+
+    .avatar-section img {
+      width: 120px;
+      border-radius: 20px;
+      transition: 0.3s ease;
+    }
+
+    .messages {
+      height: 220px;
+      overflow-y: auto;
+      margin-top: 10px;
+      padding: 10px;
+    }
+
+    .bot-message,
+    .user-message {
+      padding: 10px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .bot-message {
+      background: rgba(255,255,255,0.5);
+    }
+
+    .user-message {
+      background: rgba(78,52,46,0.2);
+      text-align: right;
+    }
+
+    .input-area {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .input-area input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    .input-area button {
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      background: #4e342e;
+      color: white;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="caricatura.png" alt="Retrato de Anduescribe" />
+
+    <h1>Anduescribe</h1>
+
+    <p>
+      Palabras, ideas y líneas de código que cuentan lo que observo y siento.
+    </p>
+  </header>
+
+  <section>
+    <h2>Sobre mí</h2>
+
+    <p>
+      Soy una mente creativa e introspectiva. Me dedico a explorar el lenguaje
+      desde la escritura, la programación y el análisis. Estoy en constante
+      aprendizaje y disfruto crear espacios donde la lógica y la emoción se cruzan.
+    </p>
+  </section>
+
+  <section>
+
+    <h2>Portafolio</h2>
+
+    <div class="proyecto">
+      <h3>✍️ Redacción creativa</h3>
+
+      <p>
+        Texto breve que explora la conciencia:
+        "Soy consciente, estoy aquí. Entonces ¿por qué me cuesta tanto reaccionar?".
+        Ideal para blogs reflexivos o publicaciones con profundidad emocional.
+      </p>
+    </div>
+
+    <div class="proyecto">
+      <h3>📆 Corrección de textos</h3>
+
+      <p>
+        Corrección de ortografía, estilo y claridad en textos argumentativos y narrativos.
+        Antes: "La jente no save lo que pierde".
+        Después: "La gente no sabe lo que pierde".
+      </p>
+    </div>
+
+    <div class="proyecto">
+      <h3>📱 Redes sociales</h3>
+
+      <p>
+        Diseño de contenido para Instagram con enfoque en frases poéticas,
+        engagement y estética visual coherente.
+        Ej: "El arte no siempre grita, a veces susurra."
+      </p>
+    </div>
+
+    <div class="proyecto">
+      <h3>🧰 Investigación y análisis</h3>
+
+      <p>
+        Proyecto de análisis comparativo de tasas de inversión en bancos usando Python.
+        Aplicación de lógica, estructura de datos y presentación clara de resultados.
+      </p>
+    </div>
+
+    <div class="proyecto">
+      <h3>💻 Programación</h3>
+
+      <p>
+        Web desarrollada desde cero como parte de un proyecto de tienda online.
+        Incluye HTML, CSS, JavaScript y consumo de API.
+        Diseño responsivo y funcionalidad de carrito con almacenamiento local.
+      </p>
+
+      <p>
+        <a href="https://anduule.github.io/MiPagWeb/" target="_blank">
+          Visitar tienda online
+        </a>
+      </p>
+    </div>
+
+  </section>
+
+  <section>
+    <h2>Contacto</h2>
+
+    <p>
+      Podés escribirme a
+      <strong>anduuescribe@gmail.com</strong>
+      o contactarme vía GitHub cuando el sitio esté publicado.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Anduescribe - Diseño y contenido con alma</p>
+  </footer>
+
+  <!-- CHATBOT -->
+
+  <div class="chat-container">
+
+    <div class="avatar-section">
+      <img id="avatar" src="avatar/idle.jpg" alt="Avatar">
+    </div>
+
+    <div class="chat-box">
+
+      <div id="messages" class="messages">
+
+        <div class="bot-message">
+          Hola 🌸 Aquí Andu Te Escribe.
+          Estoy para ayudarte con dudas sobre programación,
+          creatividad y asesoría laboral.
+        </div>
+
+      </div>
+
+      <div class="input-area">
+
+        <input
+          type="text"
+          id="userInput"
+          placeholder="Escribime algo..."
+        >
+
+        <button id="sendBtn">Enviar</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="chatbot.js"></script>
+
+</body>
+</html>
