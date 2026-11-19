@@ -6,7 +6,7 @@ Andu Digital es mi espacio profesional, donde reúno mis conocimientos, proyecto
 
 ## Sobre mí
 
-Soy técnica en formación en Ciencia de Datos e Inteligencia Artificial, próxima a recibirme. Cuento con conocimientos en programación, desarrollo web, procesamiento de datos y herramientas digitales.
+Soy técnica en Ciencia de Datos e Inteligencia Artificial. Cuento con conocimientos en programación, desarrollo web, procesamiento de datos y herramientas digitales.
 
 Me interesa crear soluciones prácticas que permitan organizar información, optimizar tareas y transformar ideas en proyectos funcionales.
 
