@@ -1,278 +1,533 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portafolio creativo de Anduescribe: redacción, programación, corrección y más." />
-  <title>Anduescribe</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Andu Digital: asistencia virtual, organización de datos, automatización, desarrollo web y contenido digital.">
+  <meta name="theme-color" content="#f8f7f4">
+  <title>Andu Digital | Tecnología, creatividad y soluciones</title>
 
   <style>
+    :root {
+  --fondo: #F4EFE5;
+  --blanco: #FFFCF7;
+  --texto: #343A40;
+  --secundario: #6B716D;
+  --acento: #24483F;
+  --acento-claro: #E5EBE5;
+  --borde: #DED8CD;
+  --terracota: #C77B5A;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
-      font-family: 'Georgia', serif;
-      background: #fdf6f0;
-      color: #3b2f2f;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--fondo);
+      color: var(--texto);
+      line-height: 1.7;
     }
 
-    header {
-      background: #fff3e0;
-      text-align: center;
-      padding: 2rem 1rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    a {
+      color: var(--acento);
+      text-decoration: none;
     }
 
-    header img {
-      width: 150px;
-      border-radius: 100px;
-      margin-bottom: 1rem;
+    a:hover {
+      text-decoration: underline;
     }
 
-    header h1 {
-      font-size: 2.5rem;
+    .contenedor {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 5%;
+      background: var(--blanco);
+      border-bottom: 1px solid var(--borde);
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .marca {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: var(--acento);
+    }
+
+    nav .enlaces {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      font-size: .95rem;
+    }
+
+  
+     header {
+      position: relative;
+      min-height: 490px;
+      padding: 100px 7%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+      background: linear-gradient(90deg, rgba(5, 15, 21, 0.96) 0%, rgba(5, 15, 21, 0.72) 43%, rgba(5, 15, 21, 0.05) 100%),
+        url("andu-digital-hero.png") right center / auto 100% no-repeat;
+      background-color: #08151b;
+      color: #FFFCF7;
+    }
+
+     header h1 {
+      color: #FFFCF7;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+    }
+
+     header p {
+      color: #F4EFE5;
+      max-width: 520px;
+      font-size: 1.25rem;
+      line-height: 1.5;
+    }
+
+/* La caricatura ahora forma parte del fondo */
+     header img {
+      display: none;
+    }
+
+@media (max-width: 700px) {
+     header {
+      min-height: 560px;
+      padding: 70px 25px;
+      background:
+        linear-gradient(180deg, rgba(5, 15, 21, 0.2), rgba(5, 15, 21, 0.96) 65%),
+        url("andu-digital-hero.png") center top / auto 65% no-repeat;
+      background-color: #08151b;
+      justify-content: flex-end;
+    }
+    }
+
+
+    h1 {
+      font-size: clamp(2.5rem, 7vw, 4rem);
+      line-height: 1.15;
       margin: 0;
+      color: var(--acento);
     }
 
     header p {
-      font-style: italic;
-      margin-top: 0.5rem;
+      max-width: 650px;
+      margin: 18px auto 28px;
+      font-size: 1.15rem;
+      color: var(--secundario);
+    }
+
+    .boton {
+      display: inline-block;
+      padding: 12px 23px;
+      background: #C77B5A;
+      color: white;
+      border-radius: 7px;
+      font-weight: bold;
+      margin: 5px;
+      transition: .3s ease;
+    }
+
+    .boton:hover {
+      background: #AD6347;
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    .boton:hover {
+      background: #3d554d;
+      text-decoration: none;
+    }
+
+    .boton-secundario {
+      background: transparent;
+      color: var(--acento);
+      border: 1px solid var(--acento);
     }
 
     section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      padding: 65px 0;
     }
 
-    h2 {
-      color: #4e342e;
-      border-bottom: 2px solid #d7ccc8;
-      padding-bottom: 0.5rem;
+    .titulo {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .titulo h2 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .titulo p {
+      color: var(--secundario);
+    }
+
+    .sobre-mi {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.08rem;
+    }
+
+    .grilla {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .tarjeta {
+      background: var(--blanco);
+      border: 1px solid var(--borde);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.035);
+    }
+
+    .tarjeta h3 {
+      margin-top: 0;
+      color: var(--acento);
+    }
+
+    .tarjeta p {
+      color: var(--secundario);
+    }
+
+    .etiqueta {
+      display: inline-block;
+      background: var(--acento-claro);
+      color: var(--acento);
+      border-radius: 20px;
+      padding: 4px 10px;
+      font-size: .8rem;
+      margin-bottom: 10px;
+    }
+
+    .proyectos {
+      background: #eef1ed;
     }
 
     .proyecto {
-      background: #ffffff;
-      padding: 1rem;
-      margin: 1rem 0;
-      border-left: 4px solid #a1887f;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      border: 1px solid var(--borde);
+    }
+
+    .proyecto h3 {
+      color: var(--acento);
+      margin-top: 0;
+    }
+
+    .videos {
+      text-align: center;
+    }
+
+    .video-pendiente {
+      background: white;
+      border: 1px dashed #aab8b0;
+      border-radius: 12px;
+      padding: 35px 20px;
+    }
+
+    .video-pendiente .icono {
+      font-size: 2.5rem;
+    }
+
+    .contacto {
+      background: var(--acento);
+      color: white;
+      text-align: center;
+    }
+
+    .contacto p {
+      color: #edf2ef;
+    }
+
+    .contacto .boton {
+      background: white;
+      color: var(--acento);
     }
 
     footer {
       text-align: center;
-      padding: 1rem;
-      background: #fbe9e7;
-      color: #5d4037;
-    }
-
-    /* CHATBOT */
-
-    .chat-container {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 320px;
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      padding: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
-      z-index: 999;
-    }
-
-    .avatar-section {
-      text-align: center;
-    }
-
-    .avatar-section img {
-      width: 120px;
-      border-radius: 20px;
-      transition: 0.3s ease;
-    }
-
-    .messages {
-      height: 220px;
-      overflow-y: auto;
-      margin-top: 10px;
-      padding: 10px;
-    }
-
-    .bot-message,
-    .user-message {
-      padding: 10px;
-      border-radius: 12px;
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
-
-    .bot-message {
-      background: rgba(255,255,255,0.5);
-    }
-
-    .user-message {
-      background: rgba(78,52,46,0.2);
-      text-align: right;
-    }
-
-    .input-area {
-      display: flex;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .input-area input {
-      flex: 1;
-      padding: 10px;
-      border-radius: 10px;
-      border: none;
-    }
-
-    .input-area button {
-      padding: 10px;
-      border: none;
-      border-radius: 10px;
-      background: #4e342e;
+      padding: 22px;
+      background: #26352f;
       color: white;
-      cursor: pointer;
+      font-size: .9rem;
     }
 
+    @media (max-width: 650px) {
+      nav {
+        justify-content: center;
+      }
+
+      nav .enlaces {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      header {
+        padding: 60px 15px;
+      }
+
+      section {
+        padding: 45px 0;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <img src="caricatura.png" alt="Retrato de Anduescribe" />
+  <nav>
+    <a class="marca" href="#">Andu Digital</a>
 
-    <h1>Anduescribe</h1>
+    <div class="enlaces">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#videos">Videos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
+
+  <header>
+    <img src="caricatura.png" alt="Ilustración personal">
+
+    <h1>Andu Digital</h1>
 
     <p>
-      Palabras, ideas y líneas de código que cuentan lo que observo y siento.
+      Tecnología, creatividad y soluciones para tus proyectos.
+      Transformo ideas en herramientas, contenido y soluciones digitales.
     </p>
+
+    <a class="boton" href="#servicios">Conocé mis servicios</a>
+    <a class="boton boton-secundario" href="#contacto">Contactame</a>
   </header>
 
-  <section>
-    <h2>Sobre mí</h2>
+  <main>
 
-    <p>
-      Soy una mente creativa e introspectiva. Me dedico a explorar el lenguaje
-      desde la escritura, la programación y el análisis. Estoy en constante
-      aprendizaje y disfruto crear espacios donde la lógica y la emoción se cruzan.
-    </p>
-  </section>
-
-  <section>
-
-    <h2>Portafolio</h2>
-
-    <div class="proyecto">
-      <h3>✍️ Redacción creativa</h3>
-
-      <p>
-        Texto breve que explora la conciencia:
-        "Soy consciente, estoy aquí. Entonces ¿por qué me cuesta tanto reaccionar?".
-        Ideal para blogs reflexivos o publicaciones con profundidad emocional.
-      </p>
-    </div>
-
-    <div class="proyecto">
-      <h3>📆 Corrección de textos</h3>
-
-      <p>
-        Corrección de ortografía, estilo y claridad en textos argumentativos y narrativos.
-        Antes: "La jente no save lo que pierde".
-        Después: "La gente no sabe lo que pierde".
-      </p>
-    </div>
-
-    <div class="proyecto">
-      <h3>📱 Redes sociales</h3>
-
-      <p>
-        Diseño de contenido para Instagram con enfoque en frases poéticas,
-        engagement y estética visual coherente.
-        Ej: "El arte no siempre grita, a veces susurra."
-      </p>
-    </div>
-
-    <div class="proyecto">
-      <h3>🧰 Investigación y análisis</h3>
-
-      <p>
-        Proyecto de análisis comparativo de tasas de inversión en bancos usando Python.
-        Aplicación de lógica, estructura de datos y presentación clara de resultados.
-      </p>
-    </div>
-
-    <div class="proyecto">
-      <h3>💻 Programación</h3>
-
-      <p>
-        Web desarrollada desde cero como parte de un proyecto de tienda online.
-        Incluye HTML, CSS, JavaScript y consumo de API.
-        Diseño responsivo y funcionalidad de carrito con almacenamiento local.
-      </p>
-
-      <p>
-        <a href="https://anduule.github.io/MiPagWeb/" target="_blank">
-          Visitar tienda online
-        </a>
-      </p>
-    </div>
-
-  </section>
-
-  <section>
-    <h2>Contacto</h2>
-
-    <p>
-      Podés escribirme a
-      <strong>anduuescribe@gmail.com</strong>
-      o contactarme vía GitHub cuando el sitio esté publicado.
-    </p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Anduescribe - Diseño y contenido con alma</p>
-  </footer>
-
-  <!-- CHATBOT -->
-
-  <div class="chat-container">
-
-    <div class="avatar-section">
-      <img id="avatar" src="avatar/idle.jpg" alt="Avatar">
-    </div>
-
-    <div class="chat-box">
-
-      <div id="messages" class="messages">
-
-        <div class="bot-message">
-          Hola 🌸 Aquí Andu Te Escribe.
-          Estoy para ayudarte con dudas sobre programación,
-          creatividad y asesoría laboral.
+    <section id="sobre-mi">
+      <div class="contenedor">
+        <div class="titulo">
+          <h2>Sobre mí</h2>
+          <p>Creatividad y tecnología en un mismo espacio.</p>
         </div>
 
+        <div class="sobre-mi">
+          <p>
+            Soy técnica en Ciencia de Datos e Inteligencia Artificial,
+            con formación en programación y desarrollo web.
+          </p>
+
+          <p>
+            Me interesa encontrar soluciones prácticas a través de la
+            tecnología, la organización de información y la comunicación.
+            Combino mi perfil creativo con herramientas digitales para
+            ayudar a personas y pequeños negocios a optimizar sus tareas.
+          </p>
+
+          <p>
+            Estoy en constante aprendizaje y disfruto convertir problemas
+            cotidianos en oportunidades para crear y mejorar.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <div class="input-area">
+    <section id="servicios">
+      <div class="contenedor">
+        <div class="titulo">
+          <h2>¿En qué puedo ayudarte?</h2>
+          <p>Soluciones digitales y asistencia para tu trabajo o emprendimiento.</p>
+        </div>
 
-        <input
-          type="text"
-          id="userInput"
-          placeholder="Escribime algo..."
-        >
+        <div class="grilla">
 
-        <button id="sendBtn">Enviar</button>
+          <article class="tarjeta">
+            <h3>📋 Asistencia virtual y administrativa</h3>
+            <p>
+              Organización de documentos, carga de datos,
+              actualización de información, gestión de tareas
+              y soporte administrativo.
+            </p>
+          </article>
 
+          <article class="tarjeta">
+            <h3>📊 Datos y Excel</h3>
+            <p>
+              Limpieza y organización de archivos Excel y CSV,
+              detección de duplicados, identificación de datos
+              faltantes y elaboración de reportes.
+            </p>
+          </article>
+
+          <article class="tarjeta">
+            <h3>⚙️ Automatización con Python</h3>
+            <p>
+              Automatización de tareas repetitivas, procesamiento
+              de archivos y pequeñas herramientas para facilitar
+              el trabajo cotidiano.
+            </p>
+          </article>
+
+          <article class="tarjeta">
+            <h3>💻 Desarrollo web</h3>
+            <p>
+              Creación y edición de páginas web con HTML, CSS
+              y JavaScript. Mejoras visuales y funcionalidades
+              básicas para sitios digitales.
+            </p>
+          </article>
+
+          <article class="tarjeta">
+            <h3>✍️ Redacción y contenido digital</h3>
+            <p>
+              Redacción y corrección de textos, descripciones
+              de productos, publicaciones para redes sociales
+              y contenido informativo.
+            </p>
+          </article>
+
+          <article class="tarjeta">
+            <h3>💬 Atención al cliente</h3>
+            <p>
+              Gestión de consultas, comunicación con clientes,
+              seguimiento de pedidos y organización de
+              información comercial.
+            </p>
+          </article>
+
+        </div>
       </div>
+    </section>
 
-    </div>
+    <section id="proyectos" class="proyectos">
+      <div class="contenedor">
+        <div class="titulo">
+          <h2>Proyectos destacados</h2>
+          <p>Algunos trabajos y desarrollos que muestran lo que puedo hacer.</p>
+        </div>
 
-  </div>
+        <div class="grilla">
 
-  <script src="chatbot.js"></script>
+          <article class="proyecto">
+            <span class="etiqueta">Python · Pandas</span>
+            <h3>DataCleaner</h3>
+            <p>
+              Herramienta desarrollada en Python para automatizar
+              la limpieza, validación y organización de archivos
+              CSV y Excel. Detecta duplicados y campos vacíos
+              y genera reportes.
+            </p>
+            <a href="https://github.com/anduule/DataCleaner"
+               target="_blank" rel="noopener noreferrer">
+              Ver proyecto en GitHub →
+            </a>
+          </article>
+
+          <article class="proyecto">
+            <span class="etiqueta">Desarrollo web</span>
+            <h3>Tienda online</h3>
+            <p>
+              Proyecto web que integra HTML, CSS y JavaScript,
+              consumo de API y funcionalidades de carrito
+              con almacenamiento local.
+            </p>
+            <a href="https://anduule.github.io/MiPagWeb/"
+               target="_blank" rel="noopener noreferrer">
+              Visitar tienda online →
+            </a>
+          </article>
+
+          <article class="proyecto">
+            <span class="etiqueta">Python · React · FastAPI</span>
+            <h3>EcoFacturaIA</h3>
+            <p>
+              Prototipo en desarrollo orientado al procesamiento
+              de facturas y la generación de información útil
+              mediante herramientas de programación.
+            </p>
+            <p><strong>Estado:</strong> proyecto en desarrollo.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="videos" class="videos">
+      <div class="contenedor">
+        <div class="titulo">
+          <h2>Videos y demostraciones</h2>
+          <p>
+            Un espacio para compartir proyectos, tutoriales
+            y recorridos por herramientas digitales.
+          </p>
+        </div>
+
+        <div class="grilla">
+          <article class="video-pendiente">
+            <div class="icono">🎬</div>
+            <h3>Demostraciones de proyectos</h3>
+            <p>Próximamente: recorridos por herramientas y desarrollos.</p>
+          </article>
+
+          <article class="video-pendiente">
+            <div class="icono">💡</div>
+            <h3>Tutoriales y tecnología</h3>
+            <p>Próximamente: explicaciones y consejos sobre herramientas digitales.</p>
+          </article>
+
+          <article class="video-pendiente">
+            <div class="icono">👩‍💻</div>
+            <h3>Conocé mi trabajo</h3>
+            <p>Próximamente: una presentación de mis servicios y proyectos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <div class="contenedor">
+        <h2>¿Trabajamos juntos?</h2>
+
+        <p>
+          Si necesitás ayuda con tareas digitales, organización
+          de datos, desarrollo web o contenido, podemos conversar.
+        </p>
+
+        <a class="boton" href="mailto:anduuescribe@gmail.com">
+          Escribime por email
+        </a>
+
+        <a class="boton" href="https://github.com/anduule"
+           target="_blank" rel="noopener noreferrer">
+          Mi GitHub
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Andu Digital · Tecnología, creatividad y soluciones.</p>
+  </footer>
 
 </body>
 </html>
+
